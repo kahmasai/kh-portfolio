@@ -1,0 +1,507 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Browser Upgrade Prompt
+     ========================================================================== */
+  
+  .browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+  
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+  
+  /** BASE STYLES **/
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-family: 'Tilt Neon', cursive;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: 'Tilt Neon', cursive;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}
+
+.full-width {
+  width: 100%;
+  overflow: auto;
+}
+
+
+/** HEADER **/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  overflow: auto;
+  background-color: #fff;
+}
+
+header .content-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.header-divider {
+  height: 2px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+
+.logo a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 20px 0;
+
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 5px;
+}
+
+nav ul li a {
+  color: #0b9eb1;
+  font-size: .875 em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+nav ul li a:hover {
+  font-weight: 900;
+}
+
+/** sticky header -- JS **/
+.sticky {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:9999
+}
+
+/** HERO AREA -- JS **/
+.hero-area {
+  background: url(../img/hero-img-revised.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: row; wrap;
+}
+
+.hero-area .content-wrapper {
+ margin: 0;
+}
+
+
+.hero-area h1 {
+  font-size: 2.15 em;
+  font-weight: 700;
+  opacity: 0;
+  -webkit-transition: opacity 1s .25s ease-out;
+  transition: opacity 1s .25s ease-out;
+  will-change: opacity;
+}
+
+.hero-area h1.is-visible {
+  opacity: 1;
+}
+
+.hero-area h1 span {
+  opacity: 0;
+  -webkit-transition: opacity 2s .25s ease-out;
+  transition: opacity 2s .25s ease-out;
+  transition-delay: 1s;
+
+}
+
+.hero-area h1 span.is-visible {
+  opacity: 1;
+}
+
+
+/** ABOUT **/
+#about {
+  background: #0b9eb1;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+#about .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+#about .about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#about p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+#about #headshot-img {
+  border: 5px solid #c6c6c6;
+  margin-top: 5px;
+  width: 70%;
+  max-width: 300px;
+}
+
+#about span {
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  
+}
+/** WORK **/
+#work {
+  display: flex;
+  justify-content: center;
+}
+
+#work .gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#work .gallery-item {
+  box-sizing: border-box;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  margin: 50px 0;
+  opacity: 0;
+  -webkit-transition: opacity 1s .25s ease-out;
+  transition: opacity 1s .25s ease-out;
+  will-change: opacity;
+}
+
+#work .gallery-item.is-visible {
+  opacity: 1;
+}
+
+.gallery-item .thumbnail {
+  box-sizing: border-box;
+  border: 2px solid #8f8f8f;
+  width: 100%;
+}
+
+.gallery-item .thumbnail:hover {
+  border: 5px solid #0b9eb1;
+}
+
+#work h3 {
+  margin: 10px;
+}
+
+#work p {
+  font-size: 1em;
+  max-width: 90%;
+  text-align: center;
+  margin: 0;
+}
+
+/** CONTACT **/
+#contact {
+  background: #0b9eb1;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#contact .contact-item {
+  margin: 40px 0;
+}
+
+#contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#contact ul {
+  margin: 20px;
+  padding: 0;
+}
+#contact ul li {
+  display: inline-block;
+  padding: 0 20px;
+}
+#contact ul li i {
+  font-size: 2em;
+}
+#contact h3 {
+  font-size: 1em;
+}
+
+/** FOOTER **/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer .content-wrapper {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  header .content-wrapper {
+      flex-flow: row wrap;
+      justify-content: space-between;
+  }
+
+  .header-divider {
+      display: none;
+  }
+
+  .hero-area h1 {
+      font-size: 2.5em;
+      max-width: 700px;
+  }
+
+  nav ul {
+      justify-content: space-between;
+      flex-flow: row wrap;
+      width: 350px;
+  }
+  
+  nav ul li {
+      padding: 0;
+  }
+
+  .hero-area .content-wrapper {
+      margin: 50px 0 200px 0;
+  }
+
+  .about-details {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 0;
+  }
+
+  #about .about-image {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-width: 300px;
+      max-width: 350px;
+  }
+
+  #about #headshot-img {
+      border: 5px solid #ffffff;
+      margin-top: 5px;
+      width: 100%;
+  }
+
+  .about-details {
+      display: flex;
+      justify-content: center;
+  }
+
+  #about p {
+      margin: 0 0 10px 20px;
+      max-width: 600px;
+  }
+
+  #work .gallery {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-flow: row wrap;
+  }
+
+  #work .gallery-item {
+      max-width: 45%;
+  }
+
+  .contact-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-flow: row wrap;
+  }
+
+  #contact .contact-item {
+      width: 12.5em;
+  }
+
+
+
+} /* end of TABLET media query */
+
+@media screen and (min-width: 1200px) {
+  .hero-area .content-wrapper {
+      margin: 10px 0 300px 0;
+  }
+  
+  .hero-area h1 {
+      font-size: 3.75em;
+      max-width: 1100px;
+  }
+  
+  .hero-area p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    margin: 0;
+  }
+
+  #work .gallery-item {
+      min-width: 490px;
+      max-width: 35%;
+  }
+
+  #contact .contact-item {
+      width: 12.5em;
+  }
+
+
+} /* end of DESKTOP media query */
+
+/**
+color palette:
+
+**/
